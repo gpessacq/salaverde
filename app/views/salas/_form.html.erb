@@ -1,0 +1,75 @@
+<div class="row">
+<div class="col-md-6">
+<div class="well bs-component">
+	
+<%= form_for @sala, html: { class: "form-horizontal", id: "form-horizontal" } do |f| %>
+  <fieldset>
+  <% if @sala.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sala.errors.count, "error") %> prohibited this sala from being saved:</h2>
+
+      <ul>
+      <% @sala.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  	<div class="form-group">
+      <div class="field">
+	    <%= f.label :nombre %><br>
+	    <%= f.text_field :nombre, :class => 'form-control', :id => 'inputSmall' %>
+	  </div>
+	</div>
+	<div class="form-group">
+	  <div class="field">
+	    <%= f.label :apellido %><br>
+	    <%= f.text_field :apellido, :class => 'form-control', :id => 'inputSmall' %>
+	  </div>
+	</div>
+	<div class="form-group">
+	  <div class="field">
+	    <%= f.label :cumple %><br>
+	    <%= f.date_select :cumple, 
+	                      order: [:day, :month, :year],
+	                      with_css_classes: true %>
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <div class="field">
+	    <%= f.label :email %><br>
+	    <%= f.text_field :email, :class => 'form-control', :id => 'inputSmall' %>
+	  </div>
+	</div>
+	<div class="form-group">
+	  <div class="field">
+	    <%= f.label :fecha__de_festejo %><br>
+	    <%= f.datetime_select :fecha_festejo, 
+	                          :minute_step => 15, 
+	                          :order => [:hour, :day, :month, :year],
+	                          with_css_classes: true %>
+	  </div>
+	</div>
+	<div class="form-group">
+	  <div class="field">
+	    <%= f.label :lugar__de_festejo %><br>
+	    <%= f.text_field :lugar_festejo, size: 40, :placeholder => "Dirección, Ciudad, País", :class => 'form-control', :id => 'inputSmall'  %>
+	  </div>
+	</div>
+	  <div>
+	  
+	  <br>
+	  <div class="form-group">
+		  <div class="col-lg-10 col-lg-offset-4">
+		    <%= f.button "Actualizar", :class => 'btn btn-default' %>
+		  </div>
+	  </div>	 
+	  </div>	 
+     <% end %>
+
+</fieldset>
+</div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @sala.nombre.capitalize %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @sala.apellido.capitalize %>
+</p>
+
+<p>
+  <strong>Cumple:</strong>
+  <%= @sala.cumple.strftime('%d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @sala.email %>
+</p>
+
+<p>
+  <strong>Fecha de festejo:</strong>
+  <%= @sala.fecha_festejo.strftime('%H:%Mhrs - %d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>Lugar de festejo:</strong>
+  <%= @sala.lugar_festejo %>
+</p>
+
+
+<%= if @sala.lugar_festejo.present?
+	  image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@sala.latitude}%2C#{@sala.longitude}"
+	end %> 
+	
+<p>
+	
+</p>
+<%= link_to 'Editar', edit_sala_path(@sala) %> |
+<%= link_to 'Volver al listado', salas_path %>
