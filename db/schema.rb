@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140314133935) do
 
-  create_table "salas", force: true do |t|
+  create_table "salas", force: :cascade do |t|
     t.string   "nombre"
     t.string   "apellido"
     t.date     "cumple"
