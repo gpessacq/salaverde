@@ -13,8 +13,8 @@ class SalasController < ApplicationController
   def show
     
    if params[:lugar_festejo].present?
-      @sala.latitude = '-34.603229' 
-      @sala.longitude = '-58.381842'
+#      @sala.latitude = '-34.603229' 
+#      @sala.longitude = '-58.381842'
     end    
     
   end
