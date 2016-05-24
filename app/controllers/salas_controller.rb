@@ -11,12 +11,10 @@ class SalasController < ApplicationController
   # GET /salas/1
   # GET /salas/1.json
   def show
-    
-   if params[:lugar_festejo].present?
-#      @sala.latitude = '-34.603229' 
-#      @sala.longitude = '-58.381842'
-    end    
-    
+    @hash = Gmaps4rails.build_markers(@sala) do |user, marker|
+      marker.lat @sala.latitude
+      marker.lng @sala.longitude
+    end
   end
 
   # GET /salas/new

@@ -1,3 +1,5 @@
+<%= render 'maps' %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -30,13 +32,19 @@
   <%= @sala.lugar_festejo %>
 </p>
 
+<div style='width: 500px;'>
+  <div id="map" style='width: 500px; height: 400px;'></div>
+</div>
 
-<%= if @sala.lugar_festejo.present?
-	  image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@sala.latitude}%2C#{@sala.longitude}"
-	end %> 
-	
-<p>
-	
-</p>
+<script type="text/javascript">	
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+	  handler.bounds.extendWith(markers);
+	  handler.fitMapToBounds();
+      handler.getMap().setZoom(16);
+	});
+</script>
+
 <%= link_to 'Editar', edit_sala_path(@sala) %> |
 <%= link_to 'Volver al listado', salas_path %>

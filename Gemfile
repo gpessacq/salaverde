@@ -17,6 +17,7 @@ gem 'will_paginate'
 #gem 'bootstrap-will_paginate'
 
 gem 'geocoder'
+gem 'gmaps4rails'
 
 gem 'whenever', require: false
 
