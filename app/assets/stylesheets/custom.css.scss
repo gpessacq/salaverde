@@ -2,13 +2,9 @@
 
 /* universal */
 
-
-
 body {
   padding-top: 60px;
 }
-
-
 
 /* header */
 
@@ -28,7 +24,6 @@ body {
           background: green;
   }
 }
-
 
 /* footer */
 
@@ -50,16 +45,23 @@ footer {
 
 /* Custom rules */
 
+.navbar {
+  background: green
+}
 
-.navbar{background: green}
+.navbar-inner .navbar-nav > .active,
+.navbar-inner .navbar-nav > .active > a, 
+.navbar-inner .navbar-nav > .active > a:hover{
+  color: white;
+  background: green;
+}
 
+.navbar-inner .navbar-nav > .active > a:checked,
+.navbar-inner .navbar-nav > .active > a:focus {
+  color: white;
+  background: red;
+}
 
- .navbar-inner .navbar-nav > .active > a, 
- .navbar-inner .navbar-nav > .active > a:hover, 
- .navbar-inner .navbar-nav > .active > a:focus {
-      color: white;
-      background: green;
- }
 
 .minute, .hour, .day, .month, .year {
   display: inline;
@@ -144,12 +146,3 @@ footer {
 .day::-webkit-input-placeholder {
   color: #aea79f;
 }
-/*
-.day, .month, .year [disabled],
-.day, .month, .year [readonly],
-fieldset[disabled] .day, .month, .year  {
-  cursor: not-allowed;
-  background-color: #eeeeee;
-  opacity: 1;
-}
-*/

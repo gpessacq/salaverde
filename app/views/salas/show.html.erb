@@ -3,32 +3,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
+  <strong><%= Sala.human_attribute_name(:nombre) %>: </strong>
   <%= @sala.nombre.capitalize %>
 </p>
 
 <p>
-  <strong>Apellido:</strong>
+  <strong><%= Sala.human_attribute_name(:apellido) %>: </strong>
   <%= @sala.apellido.capitalize %>
 </p>
 
 <p>
-  <strong>Cumple:</strong>
+  <strong><%= Sala.human_attribute_name(:cumple) %>: </strong>
   <%= @sala.cumple.strftime('%d/%m/%Y') %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= Sala.human_attribute_name(:email) %>: </strong>
   <%= @sala.email %>
 </p>
 
 <p>
-  <strong>Fecha de festejo:</strong>
+  <strong><%= Sala.human_attribute_name(:fecha_festejo) %>: </strong>
   <%= @sala.fecha_festejo.strftime('%H:%Mhrs - %d/%m/%Y') %>
 </p>
 
 <p>
-  <strong>Lugar de festejo:</strong>
+  <strong><%= Sala.human_attribute_name(:lugar_festejo) %>:</strong>
   <%= @sala.lugar_festejo %>
 </p>
 
@@ -46,5 +46,6 @@
 	});
 </script>
 
-<%= link_to 'Editar', edit_sala_path(@sala) %> |
-<%= link_to 'Volver al listado', salas_path %>
+<br>
+<%= link_to (t ".edit"), edit_sala_path(@sala) %> |
+<%= link_to (t ".back"), salas_path %>

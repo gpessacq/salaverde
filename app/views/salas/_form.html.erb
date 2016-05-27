@@ -45,7 +45,7 @@
 	</div>
 	<div class="form-group">
 	  <div class="field">
-	    <%= f.label :fecha__de_festejo %><br>
+	    <%= f.label :fecha_festejo %><br>
 	    <%= f.datetime_select :fecha_festejo, 
 	                          :minute_step => 15, 
 	                          :order => [:hour, :day, :month, :year],
@@ -54,7 +54,7 @@
 	</div>
 	<div class="form-group">
 	  <div class="field">
-	    <%= f.label :lugar__de_festejo %><br>
+	    <%= f.label :lugar_festejo %><br>
 	    <%= f.text_field :lugar_festejo, size: 40, :placeholder => "Dirección, Ciudad, País", :class => 'form-control', :id => 'inputSmall'  %>
 	  </div>
 	</div>
@@ -63,7 +63,7 @@
 	  <br>
 	  <div class="form-group">
 		  <div class="col-lg-10 col-lg-offset-4">
-		    <%= f.button "Actualizar", :class => 'btn btn-default' %>
+		    <%= f.button (t ".save"), :class => 'btn btn-default' %>
 		  </div>
 	  </div>	 
 	  </div>	 

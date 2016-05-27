@@ -4,8 +4,13 @@
       <%= link_to "Sala Verde", '#', id: "logo" %>
       <nav>
         <ul class="nav navbar-nav">
-          <li class="active"><%= link_to "Inicio", root_path %></li>
+          <li class="active"><%= link_to (t ".top"), root_path %></li>
         </ul>
+      	<ul class="nav navbar-nav navbar-right">
+      	  <li class="navbar-text"><%= t ".language" %></li>
+      	  <li class="active"><%= link_to_unless_current "English", locale: "en" %></li>
+      	  <li class="active"><%= link_to_unless_current "Español", locale: "es" %></li>
+      	</ul>
       </nav>
     </div>
   </div>

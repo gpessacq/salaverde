@@ -1,8 +1,13 @@
 Salaverde::Application.routes.draw do
-  get "static_pages/about"
-  resources :salas
+  
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+    get "static_pages/about"
+    resources :salas    
+  end
+  
+  get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  #get '', to: redirect("/#{I18n.default_locale}")
   root 'salas#index'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
