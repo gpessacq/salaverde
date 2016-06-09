@@ -1,7 +1,7 @@
 Salaverde::Application.routes.draw do
   
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    get "static_pages/about"
+    get 'static_pages/about'
     resources :salas    
   end
   
