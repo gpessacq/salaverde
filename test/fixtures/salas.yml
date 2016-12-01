@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
-  apellido: MyString
+  nombre: Jack
+  apellido: Black
   cumple: 2014-03-11
-  email: MyString
+  email: jackblack@email.com
   fecha_festejo: 2014-03-11
-  lugar_festejo: MyString
+  lugar_festejo: Julian Alvares 2420
 
 two:
-  nombre: MyString
-  apellido: MyString
+  nombre: Fred
+  apellido: Smith
   cumple: 2014-03-11
-  email: MyString
+  email: fsmith@email.com
   fecha_festejo: 2014-03-11
-  lugar_festejo: MyString
+  lugar_festejo: Gurruchaga 1200

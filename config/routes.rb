@@ -1,11 +1,11 @@
 Salaverde::Application.routes.draw do
   
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    get 'static_pages/about'
+    get 'about'   => 'static_pages#about'
     resources :salas    
   end
   
-  get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+#  get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   #get '', to: redirect("/#{I18n.default_locale}")
   root 'salas#index'
 
