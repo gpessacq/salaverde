@@ -25,9 +25,11 @@
         <td><%= sala.email %></td>
         <td><%= l(sala.fecha_festejo, format: :longer) %></td>
         <td><%= sala.lugar_festejo %></td>
-        <td><%= link_to (t ".show"), sala %></td>
-        <td><%= link_to (t ".edit"), edit_sala_path(sala) %></td>
-        <td><%= link_to (t ".delete"), sala, method: :delete, data: { confirm: (t ".confirm") } %></td>
+        <td><%= link_to (t ".show"), sala, class: "btn btn-info btn-sm" %></td>
+        <td><%= link_to (t ".edit"), edit_sala_path(sala), class: "btn btn-warning btn-sm" %></td>
+        <td><%= link_to (t ".delete"), sala, method: :delete,
+                data: { confirm: (t ".confirm") },
+                class: "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>

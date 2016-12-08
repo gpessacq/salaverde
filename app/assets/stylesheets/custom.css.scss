@@ -50,7 +50,7 @@ footer {
 }
 
 .navbar-inner .navbar-nav > .active,
-.navbar-inner .navbar-nav > .active > a, 
+.navbar-inner .navbar-nav > .active > a,
 .navbar-inner .navbar-nav > .active > a:hover{
   color: white;
   background: green;
@@ -145,4 +145,87 @@ footer {
 
 .day::-webkit-input-placeholder {
   color: #aea79f;
+}
+
+/* Bootstrap buttons colors */
+
+.btn-warning {
+  background-color: #ffbc0f;
+  border-color: #ffbc0f;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #f5b000;
+  border-color: #db9e00;
+}
+.btn-warning.disabled:hover,
+.btn-warning.disabled:focus,
+.btn-warning.disabled:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled]:hover,
+.btn-warning[disabled]:focus,
+.btn-warning[disabled]:active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning:hover,
+fieldset[disabled] .btn-warning:focus,
+fieldset[disabled] .btn-warning:active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #ffbc0f;
+  border-color: #ffbc0f;
+}
+
+.btn-danger {
+  background-color: #e60e1a;
+  border-color: #e60e1a;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #ce0d17;
+  border-color: #b60b15;
+}
+.btn-danger.disabled:hover,
+.btn-danger.disabled:focus,
+.btn-danger.disabled:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled]:hover,
+.btn-danger[disabled]:focus,
+.btn-danger[disabled]:active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger:hover,
+fieldset[disabled] .btn-danger:focus,
+fieldset[disabled] .btn-danger:active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #e60e1a;
+  border-color: #e60e1a;
+}
+
+.btn-info {
+  background-color: #0fc4d1;
+  border-color: #0fc4d1;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+  background-color: #0daeb9;
+  border-color: #0c97a1;
+}
+.btn-info.disabled:hover,
+.btn-info.disabled:focus,
+.btn-info.disabled:active,
+.btn-info.disabled.active,
+.btn-info[disabled]:hover,
+.btn-info[disabled]:focus,
+.btn-info[disabled]:active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info:hover,
+fieldset[disabled] .btn-info:focus,
+fieldset[disabled] .btn-info:active,
+fieldset[disabled] .btn-info.active {
+  background-color: #0fc4d1;
+  border-color: #0fc4d1;
 }

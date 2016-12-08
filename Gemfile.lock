@@ -200,6 +200,7 @@ DEPENDENCIES
   less-rails-bootstrap
   mini_backtrace (= 0.1.3)
   minitest-reporters (= 1.0.5)
+  pry
   pry-rails
   rails (= 4.2.6)
   sass-rails (~> 4.0.0)
@@ -212,3 +213,6 @@ DEPENDENCIES
   web-console (= 2.0.0.beta3)
   whenever
   will_paginate
+
+BUNDLED WITH
+   1.12.5
