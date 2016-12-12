@@ -22,11 +22,7 @@ class SalasController < ApplicationController
 
   def create
     @sala = Sala.new(sala_params)
-
-    unless params[:lugar_festejo].present?
-      set_default_location
-    end
-
+    set_default_location
     respond_to do |format|
       if @sala.save
         format.html { redirect_to @sala, notice: 'Registro agregado.' }
@@ -37,11 +33,7 @@ class SalasController < ApplicationController
   end
 
   def update
-
-    unless params[:lugar_festejo].present?
-      set_default_location
-    end
-
+    set_default_location
     respond_to do |format|
       if @sala.update(sala_params)
         format.html { redirect_to @sala, notice: 'Registro modificado.' }
@@ -66,12 +58,14 @@ class SalasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sala_params
-      params.require(:sala).permit(:nombre, :apellido, :cumple, :email,
+      params.fetch(:sala, {}).permit(:nombre, :apellido, :cumple, :email,
                                    :fecha_festejo, :lugar_festejo)
     end
 
     def set_default_location
-      @sala.latitude = '-34.603229'
-      @sala.longitude = '-58.381842'
+      unless params[:lugar_festejo].present?
+        @sala.latitude = '-34.603229'
+        @sala.longitude = '-58.381842'
+      end
     end
 end

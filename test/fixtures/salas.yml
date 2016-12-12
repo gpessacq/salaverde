@@ -15,3 +15,11 @@ two:
   email: fsmith@email.com
   fecha_festejo: 2014-03-11
   lugar_festejo: Gurruchaga 1200
+
+three:
+  nombre: Fred
+  apellido: Astaire
+  cumple: 2014-03-11
+  email: fastaire@email.com
+  fecha_festejo: 2016-12-12
+  lugar_festejo: Gurruchaga 1200
