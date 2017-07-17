@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20140314133935) do
 
   create_table "salas", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
+    t.string   "nombre",        limit: 255
+    t.string   "apellido",      limit: 255
     t.date     "cumple"
-    t.string   "email"
+    t.string   "email",         limit: 255
     t.datetime "fecha_festejo"
-    t.string   "lugar_festejo"
+    t.string   "lugar_festejo", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
