@@ -45,5 +45,25 @@ class SalasControllerTest < ActionController::TestCase
       assert_redirected_to sala_url(@sala)
     end
   end
+  test "should create sala" do
+    for locale in @locales do
+      assert_difference('Sala.count') do
+        post :create, locale: "#{locale}", params: { sala: {
+                                           nombre: @sala.nombre,
+                                           apellido: @sala.apellido, cumple: @sala.cumple,
+                                           email: @sala.email, fecha_festejo: @sala.fecha_festejo,
+                                           lugar_festejo: @sala.lugar_festejo } }
+        end
+      assert_redirected_to sala_url(sala.last)
+    end
+  end
 
+  test "should destroy sala" do
+    for locale in @locales do
+      assert_difference('Sala.count', -1) do
+        delete :destroy, :id => @sala.id, locale: "#{locale}"
+      end
+      assert_redirected_to salas_url
+    end
+  end
 end

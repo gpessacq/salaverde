@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'rails', '4.0.3'
-gem 'rails', '4.2.6'
+ruby "2.4.1"
+gem 'rails', '4.2.7'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -56,4 +56,9 @@ end
 group :test do
   gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '0.1.3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
