@@ -4,9 +4,6 @@ source 'https://rubygems.org'
 ruby "2.4.1"
 gem 'rails', '4.2.7'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # gem 'bootstrap-sass'
 gem 'less-rails-bootstrap'
 gem 'therubyracer'
@@ -51,6 +48,8 @@ group :development, :test do
   gem 'spring',      '1.1.3'
   gem 'pry'
   gem 'pry-rails'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :test do
