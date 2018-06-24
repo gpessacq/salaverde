@@ -1,5 +1,4 @@
 class SalasController < ApplicationController
-#  http_basic_authenticate_with name: "invitado", password: "password2014"
   before_action :set_sala, only: [:show, :edit, :update, :destroy]
 
   def index
